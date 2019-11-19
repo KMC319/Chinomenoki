@@ -3,6 +3,7 @@ using UnityEngine;
 namespace Main {
     public class LectureObj : MonoBehaviour, ITakable {
         [SerializeField] private SpriteRenderer spriteRenderer;
+        [SerializeField] private Canvas description;
         private Rigidbody rigid;
         private bool isTook;
         private Transform player;
@@ -14,24 +15,28 @@ namespace Main {
         
         private void Awake() {
             rigid = GetComponent<Rigidbody>();
-            rigid.useGravity = false;
+            description.gameObject.SetActive(false);
         }
 
         private void Update() {
+            if (isTook) {
+                transform.position = player.position + player.forward*1.5f;
+            }
             transform.LookAt(player);
         }
 
         public void Take(Transform parent) {
-            transform.SetParent(parent);
-            rigid.useGravity = false;
+            rigid.Sleep();
             isTook = true;
+            description.gameObject.SetActive(true);
         }
 
         public void Release() {
+            rigid.WakeUp();
             rigid.useGravity = true;
-            transform.SetParent(null);
             isTook = false;
-            rigid.velocity = -Vector3.forward * 10f;
+            rigid.velocity = -transform.forward * 15f;
+            description.gameObject.SetActive(false);
         }
     }
 }

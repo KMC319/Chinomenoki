@@ -22,7 +22,7 @@ namespace Main {
                 var count = -temp.Length / 2;
                 foreach (var lectureData in temp) {
                     var offset = Quaternion.Euler(0, 30 * count, 0) * (Vector3.right * player.transform.forward.x + Vector3.forward * player.transform.forward.z);
-                    var obj = Instantiate(lectureObj,player.transform.position + 2 * offset, Quaternion.identity);
+                    var obj = Instantiate(lectureObj,player.transform.position + 2 * offset+Vector3.up*10, Quaternion.identity);
                     obj.Init(imageDatabase.Data.First(x => x.Id == lectureData.Id).Icon, player.transform);
                     count++;
                 }

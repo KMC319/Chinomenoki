@@ -18,9 +18,9 @@ namespace Data {
                 var description = datas[3];
                 var area = (AreaName) (int.TryParse(datas[4], out var a) ? a : 0);
                 var temp = datas[5].Split('$');
-                var relatedIds = temp.Any(x=> int.TryParse(x,out var result))
-                    ? temp.Select(int.Parse).ToArray()
-                    : new int[0];
+                var relatedIds = temp.Where(x => int.TryParse(x, out _))
+                    .Select(int.Parse)
+                    .ToArray();
 
                 var data = new LectureData(id, semester, name, description, area, relatedIds);
                 dataList.Add(data);
