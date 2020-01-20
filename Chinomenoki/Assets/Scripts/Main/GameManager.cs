@@ -4,12 +4,13 @@ using Data;
 using UniRx.Async;
 using UniRx.Async.Triggers;
 using UnityEngine;
+using Valve.VR.InteractionSystem;
 
 namespace Main {
     public class GameManager : MonoBehaviour {
         [SerializeField] private TextAsset data;
         [SerializeField] private LectureObj lectureObj;
-        [SerializeField] private CameraMove player;
+        [SerializeField] private Player player;
         [SerializeField] private ImageDatabase imageDatabase;
 
         private List<LectureData> curriculumData;
