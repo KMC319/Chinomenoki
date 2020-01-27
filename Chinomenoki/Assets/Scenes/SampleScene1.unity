@@ -10921,8 +10921,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.0000002, y: 1, z: 1.0000002}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 93.253525, y: 1.8416862, z: 1.0000002}
+  m_Center: {x: -46.126755, y: -0.42084306, z: 7.2972375e-16}
 --- !u!20 &976332785 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 2014920, guid: dc06161b6d97feb419f45f03b62e14b9,
@@ -11154,8 +11154,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 83.9471, y: 1, z: 1}
+  m_Center: {x: 41.47355, y: 0, z: 0}
 --- !u!1 &1128377841
 GameObject:
   m_ObjectHideFlags: 0
@@ -11912,8 +11912,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 159.82642, y: 1, z: 1}
+  m_Center: {x: -79.41322, y: 0, z: 0}
 --- !u!1 &1535004751
 GameObject:
   m_ObjectHideFlags: 0
