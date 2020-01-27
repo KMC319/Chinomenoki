@@ -4,5 +4,6 @@ namespace Data {
         InformationDesign,
         MediaEngineering,
         KnowledgeEngineering,
+        Other,
     }
 }
